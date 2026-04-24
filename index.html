@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoreSight Systems</title>
+  <meta name="description" content="CoreSight Systems — the operating layer service businesses have been waiting for. Built for the field, priced for growth." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Landing page — full viewport, no scroll */
+    html, body {
+      overflow: hidden;
+    }
+
+    .landing {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Visor/shield background shape */
+    .visor-bg {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: #3B82F6;
+      opacity: 0.05;
+      clip-path: polygon(50% 0%, 100% 15%, 100% 60%, 50% 100%, 0% 60%, 0% 15%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Diagonal stripes — bottom third */
+    .stripes {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      pointer-events: none;
+      z-index: 0;
+      background: repeating-linear-gradient(
+        -15deg,
+        transparent,
+        transparent 16px,
+        rgba(59,130,246,0.12) 16px,
+        rgba(59,130,246,0.12) 18px
+      );
+    }
+
+    /* Main content */
+    .landing-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .company-name {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      font-size: clamp(28px, 4vw, 52px);
+      color: #C17A3E;
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+    }
+
+    .tagline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: clamp(13px, 1.4vw, 17px);
+      color: #9EA3A6;
+      max-width: 520px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .divider-line {
+      width: 60px;
+      height: 1px;
+      background: #3B82F6;
+      margin: 28px auto 0;
+    }
+
+    /* Footer */
+    .landing-footer {
+      position: absolute;
+      bottom: 24px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #2E2E2E;
+      letter-spacing: 0.1em;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav: amber left (home) -->
+  <a href="index.html" class="nav-btn nav-btn-left" aria-label="CoreSight Systems home">CS</a>
+
+  <!-- Nav: blue right (info) -->
+  <a href="info.html" class="nav-btn nav-btn-right" aria-label="CoreSight Systems info">CS</a>
+
+  <!-- Landing -->
+  <div class="landing">
+    <div class="visor-bg"></div>
+    <div class="stripes"></div>
+
+    <div class="landing-content">
+      <div class="company-name">CORESIGHT SYSTEMS</div>
+      <p class="tagline">
+        Something is coming for the service industry.<br>
+        CoreSight Systems is the operating layer businesses have been waiting for — built for the field, priced for growth.
+      </p>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="landing-footer">CoreSight Systems LLC · Michigan</div>
+  </div>
+
+</body>
+</html>
