@@ -9,7 +9,9 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:"Saira",system-ui,sans-serif;font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  html,body{overflow-x:clip;max-width:100%}
+  img,svg,video{max-width:100%}
+  body{background:var(--bg);color:var(--text);font-family:"Saira",system-ui,sans-serif;font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
 
   .bg-layer{position:fixed;inset:0;z-index:-3;overflow:hidden;pointer-events:none}
   .aurora{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
