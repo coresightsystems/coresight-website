@@ -216,8 +216,8 @@
 
 <script>
   (function(){var p=document.getElementById('particles');for(var i=0;i<16;i++){var d=document.createElement('div');d.className='dot';d.style.left=Math.random()*100+'%';d.style.bottom=(-10-Math.random()*20)+'%';var dur=10+Math.random()*14;d.style.animationDuration=dur+'s';d.style.animationDelay=(-Math.random()*dur)+'s';d.style.opacity=(.2+Math.random()*.4);p.appendChild(d);}})();
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
-  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,5)*60)+'ms';io.observe(el);});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,3)*35)+'ms';io.observe(el);});
   function jump(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
   function toggleChip(el){el.classList.toggle('on');}
 </script>
