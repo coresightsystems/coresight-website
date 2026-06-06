@@ -12,8 +12,8 @@
 </head>
 <body>
 
-<div class="bg-layer"><div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div></div>
-<div class="plate"></div><div class="grid-floor"></div><div class="particles" id="particles"></div>
+<div class="bg-layer"><div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div><div class="grid-floor"></div></div>
+<div class="plate"></div><div class="particles" id="particles"></div>
 
 <header class="nav">
   <div class="wrap nav-inner">
@@ -125,13 +125,13 @@
           </div>
         </div>
         <div class="modrow">
-          <span class="modchip on"><span class="sw"></span>Customer CRM</span>
-          <span class="modchip on"><span class="sw"></span>Smart Lead Intake</span>
-          <span class="modchip on"><span class="sw"></span>Quoting</span>
-          <span class="modchip on"><span class="sw"></span>Multi-Page Proposals</span>
-          <span class="modchip"><span class="sw"></span>Field Operations</span>
-          <span class="modchip"><span class="sw"></span>HR &amp; Timekeeping</span>
-          <span class="modchip"><span class="sw"></span>Integrations</span>
+          <span class="modchip on" onclick="toggleChip(this)"><span class="sw"></span>Customer CRM</span>
+          <span class="modchip on" onclick="toggleChip(this)"><span class="sw"></span>Smart Lead Intake</span>
+          <span class="modchip on" onclick="toggleChip(this)"><span class="sw"></span>Quoting</span>
+          <span class="modchip on" onclick="toggleChip(this)"><span class="sw"></span>Multi-Page Proposals</span>
+          <span class="modchip" onclick="toggleChip(this)"><span class="sw"></span>Field Operations</span>
+          <span class="modchip" onclick="toggleChip(this)"><span class="sw"></span>HR &amp; Timekeeping</span>
+          <span class="modchip" onclick="toggleChip(this)"><span class="sw"></span>Integrations</span>
         </div>
       </div>
     </div>
@@ -219,6 +219,7 @@
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,5)*60)+'ms';io.observe(el);});
   function jump(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+  function toggleChip(el){el.classList.toggle('on');}
 </script>
 
 </body>

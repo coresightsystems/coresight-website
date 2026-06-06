@@ -21,7 +21,7 @@
   @keyframes drift3{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,40px)}}
   /* faint forged plate wash over the whole page */
   .plate{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:var(--tex);background-size:150px;opacity:.05;mix-blend-mode:overlay}
-  .grid-floor{position:fixed;left:-25%;right:-25%;bottom:-10%;height:65vh;z-index:-2;pointer-events:none;
+  .grid-floor{position:absolute;left:-25%;right:-25%;bottom:-10%;height:65vh;z-index:0;pointer-events:none;
     background-image:linear-gradient(rgba(31,139,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(31,139,255,.10) 1px,transparent 1px);
     background-size:46px 46px;transform:perspective(420px) rotateX(62deg);transform-origin:bottom center;
     mask-image:linear-gradient(to top,rgba(0,0,0,.9),transparent 75%);-webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.9),transparent 75%);animation:floor 5.5s linear infinite}
@@ -123,7 +123,7 @@
   .price-copy{flex:1;min-width:300px}
   .price-copy p{color:var(--silver-2);font-size:17px}.price-copy p+p{margin-top:14px}
   .modrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-  .modchip{font-family:"Chakra Petch";font-size:13px;letter-spacing:.06em;padding:9px 16px;border:1px solid var(--steel-line);color:var(--silver-3);background:var(--panel-2);box-shadow:var(--bevel);clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);display:flex;align-items:center;gap:9px}
+  .modchip{font-family:"Chakra Petch";font-size:13px;letter-spacing:.06em;padding:9px 16px;border:1px solid var(--steel-line);color:var(--silver-3);background:var(--panel-2);box-shadow:var(--bevel);clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);display:flex;align-items:center;gap:9px;cursor:pointer;user-select:none;transition:color .2s,border-color .2s,background .2s}
   .modchip .sw{width:9px;height:9px;border-radius:50%;background:var(--steel)}
   .modchip.on{color:var(--silver-1);border-color:var(--blue-dim);background:linear-gradient(180deg,rgba(31,139,255,.12),transparent)}
   .modchip.on .sw{background:var(--blue);box-shadow:0 0 9px var(--blue)}
@@ -150,7 +150,7 @@
   .foot-brand .name{font-family:"Chakra Petch";font-weight:700;letter-spacing:.2em;font-size:15px}
   .foot p{font-size:14px;color:var(--muted);max-width:360px}
   .foot-links{display:flex;flex-direction:column;gap:10px}
-  .foot-links a{color:var(--silver-2);text-decoration:none;font-size:14px;font-family:"Chakra Petch";letter-spacing:.04em;cursor:pointer}
+  .foot-links a{color:var(--silver-2);text-decoration:none;font-size:14px;font-family:"Chakra Petch";letter-spacing:.04em;cursor:pointer;overflow-wrap:anywhere}
   .foot-links a:hover{color:var(--blue-soft)}
   .legal-bar{margin-top:34px;padding-top:20px;border-top:1px solid rgba(54,61,72,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--silver-3)}
 
@@ -162,3 +162,20 @@
   .legal p{margin-bottom:14px;font-size:16px;color:var(--text)}
   .legal strong{color:var(--silver-1);font-weight:500}
   .legal .back{display:inline-flex;align-items:center;gap:8px;color:var(--blue-soft);text-decoration:none;font-family:"Chakra Petch";font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px;cursor:pointer}
+
+  @media(max-width:600px){
+    .wrap{padding:0 18px}
+    section.band{padding:62px 0}
+    .hero{padding:58px 0 54px}
+    .hero h1{font-size:clamp(30px,11vw,46px);letter-spacing:.06em}
+    .hero .lede{font-size:16px}
+    .emblem-wrap{width:188px;height:188px}
+    .emblem-wrap img{width:162px;height:162px}
+    .feature{padding:30px 20px}
+    .price-hero{gap:18px}
+    .price-copy{min-width:0}
+    .price-copy p{font-size:16px}
+    .price-big .num{font-size:clamp(58px,20vw,84px)}
+    .sec-head h2,.feature h2{font-size:clamp(24px,7vw,32px)}
+    .legal .wrap{padding:0 18px}
+  }
